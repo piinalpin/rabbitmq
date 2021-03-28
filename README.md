@@ -247,7 +247,7 @@ Run spring boot by typing `mvn spring-boot:run` then open Postman like below.
 
 `URL: http://localhost:8080/hello-world (POST)`
 
-![Hello world request and response](/images/rabbitmq-1.png)
+![Hello world request and response](rabbitmq-1.png)
 
 ```js
 2021-03-28 02:02:54.952  INFO 54639 --- [  XNIO-1 task-1] c.e.rabbitmq.service.HelloWorldSender    : Sending message to RabbitMQ...
@@ -258,11 +258,11 @@ Run spring boot by typing `mvn spring-boot:run` then open Postman like below.
 
 And go to RabbitMQ management by accessing `http://localhost:15672` by default username and password is `guest` then go to `Queues` tab.
 
-![Hello world queues](/images/rabbitmq-2.png)
+![Hello world queues](rabbitmq-2.png)
 
 Scroll down to `Get Message` menu, make sure the message is exists in the queue. Should be like below.
 
-![Hello world messages](/images/rabbitmq-3.png)
+![Hello world messages](rabbitmq-3.png)
 
 Try another message to RabbitMQ, we will send a json string message. Update `com.example.rabbitmq.service.MessageSender.java` like below.
 
@@ -333,7 +333,7 @@ Run spring boot by typing `mvn spring-boot:run` then open Postman like below.
 
 `URL: http://localhost:8080/sendEmail (POST)`
 
-![Send email request and response](/images/rabbitmq-4.png)
+![Send email request and response](rabbitmq-4.png)
 
 ```js
 2021-03-28 02:33:35.980  INFO 60764 --- [  XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
