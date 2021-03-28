@@ -1,6 +1,6 @@
 ### What is Message Broker?
 
-![GraphQL Modelling](/images/exchanges-topic-fanout-direct.png)
+![GraphQL Modelling](exchanges-topic-fanout-direct.png)
 
 A message broker is software that enables applications, systems, and services to communicate with each other and exchange information. The message broker does this by translating messages between formal messaging protocols. This allows interdependent services to “talk” with one another directly, even if they were written in different languages or implemented on different platforms.
 
