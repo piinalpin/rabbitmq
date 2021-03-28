@@ -1,0 +1,22 @@
+
+1. hello world
+
+2021-03-28 02:02:54.952  INFO 54639 --- [  XNIO-1 task-1] c.e.rabbitmq.service.HelloWorldSender    : Sending message to RabbitMQ...
+2021-03-28 02:02:54.957  INFO 54639 --- [  XNIO-1 task-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2021-03-28 02:02:55.107  INFO 54639 --- [  XNIO-1 task-1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4adc663e:0/SimpleConnection@43156916 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53933]
+2021-03-28 02:02:55.124  INFO 54639 --- [  XNIO-1 task-1] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (hello-world) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+
+2021-03-28 02:11:03.977  INFO 56588 --- [ntContainer#0-1] c.e.rabbitmq.service.HelloWorldSender    : Receiving message...
+2021-03-28 02:11:03.978  INFO 56588 --- [ntContainer#0-1] c.e.rabbitmq.service.HelloWorldSender    : Message is: Hello my name is Maverick
+
+
+2. sendEmail
+
+2021-03-28 02:33:35.980  INFO 60764 --- [  XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2021-03-28 02:33:36.051  INFO 60764 --- [  XNIO-1 task-1] c.example.rabbitmq.service.EmailSender   : Sending message to RabbitMQ...
+
+2021-03-28 02:40:42.115  INFO 61990 --- [ntContainer#1-1] c.example.rabbitmq.service.EmailSender   : Receiving message: {"to":"maverick@test.com","from":"calvinjoe@test.com","message":"Hello, you got message from RabbitMQ","subject":"RabbitMQ Information"}
+2021-03-28 02:40:42.115  INFO 61990 --- [ntContainer#1-1] c.example.rabbitmq.service.EmailSender   : Converting to model...
+2021-03-28 02:40:42.115  INFO 61990 --- [ntContainer#1-1] c.example.rabbitmq.service.EmailSender   : EmailModel:: EmailModel(from=calvinjoe@test.com, to=maverick@test.com, subject=RabbitMQ Information, message=Hello, you got message from RabbitMQ)
+
+
